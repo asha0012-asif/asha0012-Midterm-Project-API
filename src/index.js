@@ -6,8 +6,8 @@ const app = express();
 const moviesRouter = require("./routers/movies");
 const { errorHandler } = require("./utils/errors");
 
-app.use(cors());
 app.use(express.json());
+app.use(cors());
 
 app.get("/", (_req, res) => {
     res.send("Server is running...");
