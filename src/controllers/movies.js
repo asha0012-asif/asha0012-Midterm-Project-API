@@ -50,8 +50,6 @@ const addMovieToFavourites = ((req, res, next) => {
         const id = req.params.id;
         const newMovie = movieService.addMovieToFavourites(Number(id));
 
-        console.log("ID from controllers", id);
-
         res.status(200).json({
             data: newMovie
         });
